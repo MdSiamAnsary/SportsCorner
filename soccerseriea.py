@@ -5,9 +5,9 @@ import os
 
 soccer_data = SoccerDataAPI()
 
-if os.path.exists("seriea.txt"):
-    os.remove("seriea.txt")
-f = open("seriea.txt", "a")
+if os.path.exists("txt_seriea.txt"):
+    os.remove("txt_seriea.txt")
+f = open("txt_seriea.txt", "a")
 seriea = soccer_data.serie_a()
 for et in seriea:
     str1 = et['team']+","+ et['pos']+","+et['points']+","+et['matches_played']+","+et['wins']+","+et['losses']+","+et['goals_for']+","+et['goal_diff']+"\n"
