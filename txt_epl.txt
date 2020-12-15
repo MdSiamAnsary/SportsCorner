@@ -1,0 +1,20 @@
+Tottenham,1,25,12,7,1,24,+14
+Liverpool,2,25,12,7,1,27,+9
+Leicester City,3,24,12,8,4,24,+9
+Southampton,4,23,12,7,3,24,+7
+Chelsea,5,22,12,6,2,25,+13
+West Ham,6,20,12,6,4,20,+5
+Everton,7,20,12,6,4,21,+3
+Manchester Utd,8,20,11,6,3,19,+2
+Manchester City,9,19,11,5,2,17,+6
+Aston Villa,10,18,10,6,4,21,+8
+Crystal Palace,11,17,12,5,5,18,+1
+Newcastle Utd,12,17,11,5,4,14,-2
+Wolves,13,17,12,5,5,11,-5
+Leeds United,14,14,12,4,6,17,-5
+Arsenal,15,13,12,4,7,10,-5
+Brighton,16,10,12,2,6,15,-6
+Burnley,17,9,11,2,6,6,-12
+Fulham,18,8,12,2,8,12,-10
+West Brom,19,6,12,1,8,9,-16
+Sheffield Utd,20,1,12,0,11,5,-16
