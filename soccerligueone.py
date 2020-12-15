@@ -5,9 +5,9 @@ import os
 
 soccer_data = SoccerDataAPI()
     
-if os.path.exists("ligueone.txt"):
-    os.remove("ligueone.txt")
-f = open("ligueone.txt", "a")
+if os.path.exists("txt_ligueone.txt"):
+    os.remove("txt_ligueone.txt")
+f = open("txt_ligueone.txt", "a")
 ligueone = soccer_data.ligue_1()
 for et in ligueone:
     str1 = et['team']+","+ et['pos']+","+et['points']+","+et['matches_played']+","+et['wins']+","+et['losses']+","+et['goals_for']+","+et['goal_diff']+"\n"
