@@ -5,9 +5,9 @@ import os
 
 soccer_data = SoccerDataAPI()
 
-if os.path.exists("bundesliga.txt"):
-    os.remove("bundesliga.txt")
-f = open("bundesliga.txt", "a")
+if os.path.exists("txt_bundesliga.txt"):
+    os.remove("txt_bundesliga.txt")
+f = open("txt_bundesliga.txt", "a")
 bundesliga = soccer_data.bundesliga()
 for et in bundesliga:
     str1 = et['team']+","+ et['pos']+","+et['points']+","+et['matches_played']+","+et['wins']+","+et['losses']+","+et['goals_for']+","+et['goal_diff']+"\n"
