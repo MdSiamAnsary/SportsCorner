@@ -1,18 +1,18 @@
-Leverkusen,1,25,11,7,0,23,+13
-Bayern Munich,2,24,11,7,1,35,+18
-RB Leipzig,3,24,11,7,1,23,+14
-Wolfsburg,4,21,11,5,0,18,+7
-Dortmund,5,19,11,6,4,23,+8
-Union Berlin,6,17,11,4,2,23,+8
-Stuttgart,7,17,11,4,2,24,+7
-M'Gladbach,8,17,11,4,2,20,+3
-Eint Frankfurt,9,13,11,2,2,16,-3
-Augsburg,10,13,11,3,4,14,-3
-Hertha BSC,11,12,11,3,5,19,-1
-Hoffenheim,12,12,11,3,5,19,-2
-Werder Bremen,13,11,11,2,4,14,-5
-Freiburg,14,11,11,2,4,14,-8
-Köln,15,10,11,2,5,13,-4
-Arminia,16,7,11,2,8,8,-14
-Mainz 05,17,5,11,1,8,12,-13
-Schalke 04,18,4,11,0,7,8,-25
+Leverkusen,1,28,12,8,0,27,+17
+Bayern Munich,2,27,12,8,1,37,+19
+RB Leipzig,3,27,12,8,1,24,+15
+Dortmund,4,22,12,7,4,25,+9
+Wolfsburg,5,21,12,5,1,19,+6
+Union Berlin,6,18,12,4,2,25,+8
+Stuttgart,7,18,12,4,2,26,+7
+M'Gladbach,8,18,12,4,2,23,+3
+Augsburg,9,16,12,4,4,15,-2
+Eint Frankfurt,10,14,12,2,2,19,-3
+Freiburg,11,14,12,3,4,16,-6
+Hertha BSC,12,13,12,3,5,19,-1
+Hoffenheim,13,12,12,3,6,19,-3
+Werder Bremen,14,11,12,2,5,15,-6
+Köln,15,10,12,2,6,13,-8
+Arminia,16,7,12,2,9,8,-15
+Mainz 05,17,6,12,1,8,12,-13
+Schalke 04,18,4,12,0,8,8,-27

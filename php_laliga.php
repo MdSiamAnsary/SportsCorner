@@ -62,7 +62,7 @@ $output = shell_exec($command);
 
           while($row = mysqli_fetch_array($result))
           {
-            echo "".$row["name"]."<br>";  
+            echo "".$row["username"]."<br>";  
           }
 
         ?>

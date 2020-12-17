@@ -56,7 +56,7 @@ include_once('dbcon.php');
 
           while($row = mysqli_fetch_array($result))
           {
-            echo "".$row["name"]."<br>";  
+            echo "".$row["username"]."<br>";  
           }
 
         ?>

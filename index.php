@@ -64,9 +64,7 @@
 	if(isset($_POST['btn-register']))
 	{
 
-        $name = $_POST['registername'];
-        $name = strip_tags($name);
-        $name = htmlspecialchars($name);
+        $gender = $_POST['gender'];
 
 		$username = $_POST['registerusername'];
     	$username = strip_tags($username);
@@ -82,12 +80,8 @@
 
     	//validate
 
-        if(empty($name)){
-            $error = true;
-            $errorName = 'Please input name';
-            $regMsg = 'Registration unsuccessful';
-        }
-
+        //---------------------------------------------------------------------------------------------
+        //----------------------------Username field must be provided and be within limit--------------
     	if(empty($username)){
         	$error = true;
 			$errorUsername = 'Please input username';
@@ -97,69 +91,88 @@
             $errorUsername = 'Username must be at least 6 characters';
             $regMsg = 'Registration unsuccessful';
         }
-        elseif(strlen($username) > 10){
+        elseif(strlen($username) > 20){
             $error = true;
-            $errorUsername = 'Username must be at most 10 characters';
+            $errorUsername = 'Username must be at most 20 characters';
             $regMsg = 'Registration unsuccessful';
         }
+        //----------------------------Username field must be unique------------------------------------
+        $sql = "select * from userstable where username='$username' ";
+        $result = mysqli_query($conn, $sql);
+        $count = mysqli_num_rows($result);
+        $row = mysqli_fetch_assoc($result);
+        if($count>=1)
+        {
+           $error = true;
+           $errorUsername = 'Username already exists; Please enter another one.';
+           $regMsg = 'Registration unsuccessful';
+        }
+        //---------------------------------------------------------------------------------------------
 
+        //---------------------------------------------------------------------------------------------
+        //---------------------Valid email must be provided -------------------------------------------
     	if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
         	$error = true;
 			$errorEmail = 'Please a valid input email';
 			$regMsg = 'Registration unsuccessful';
     	}
-
+        /*
+        else
+        {
+            if(strlen($email) > 254){
+                $error = true;
+                $errorEmail = 'Input email is of invalid length';
+                $regMsg = 'Registration unsuccessful';
+            }
+        }
+        */
+        //-----------------------------------Email must be unique---------------------------------------
         $sql = "select * from userstable where email='$email' ";
         $result = mysqli_query($conn, $sql);
         $count = mysqli_num_rows($result);
         $row = mysqli_fetch_assoc($result);
-
-        $sql1 = "select * from userstable where password='$password' ";
-        $result1 = mysqli_query($conn, $sql1);
-        $count1 = mysqli_num_rows($result1);
-        $row1 = mysqli_fetch_assoc($result1);
-
         if($count>=1)
         {
            $error = true;
-		   $errorEmail = 'Email already exists; Please enter another one.';
-		   $regMsg = 'Registration unsuccessful';
+           $errorEmail = 'Email already exists; Please enter another one.';
+           $regMsg = 'Registration unsuccessful';
            
         }
-
-        if($count1>=1)
-        {
-           $error = true;
-		   $errorPassword = 'Password already exists; Please enter another one.';
-		   $regMsg = 'Registration unsuccessful';
+        //---------------------------------------------------------------------------------------------
+       
+        //---------------------------------------------------------------------------------------------
+        //----------------------------Password field must be provided and be within limit--------------
+        if(empty($password)){
+            $error = true;
+            $errorPassword = 'Please input password';
+            $regMsg = 'Registration unsuccessful';
+        }elseif(strlen($password) < 6){
+            $error = true;
+            $errorPassword = 'Password must be at least 6 characters';
+            $regMsg = 'Registration unsuccessful';
         }
-
-        if($count>=1 AND $count1>=1)
-        {
-           $error = true;
-           $errorEmail = 'Email already exists; Please enter another one.';
-		   $errorPassword = 'Password already exists; Please enter another one.';
-		   $regMsg = 'Registration unsuccessful';
-        }
-
-    	if(empty($password)){
-        	$error = true;
-			$errorPassword = 'Please password';
-			$regMsg = 'Registration unsuccessful';
-    	}elseif(strlen($password) < 6){
-        	$error = true;
-			$errorPassword = 'Password must be at least 6 characters';
-			$regMsg = 'Registration unsuccessful';
-    	}
         elseif(strlen($password) > 10){
             $error = true;
             $errorPassword = 'Password must be at most 10 characters';
             $regMsg = 'Registration unsuccessful';
         }
+        //----------------------------Password field must be unique------------------------------------
+        $sql = "select * from userstable where password='$password' ";
+        $result = mysqli_query($conn, $sql);
+        $count = mysqli_num_rows($result);
+        $row = mysqli_fetch_assoc($result);
+        if($count>=1)
+        {
+           $error = true;
+		   $errorPassword = 'Password already exists; Please enter another one.';
+		   $regMsg = 'Registration unsuccessful';
+        }
+        //---------------------------------------------------------------------------------------------
+   
 
        
     	if(!$error){
-			$sql = "insert into userstable(name, username, email ,password) values('$name', '$username', '$email', '$password')";
+			$sql = "insert into userstable(gender, username, email ,password) values('$gender', '$username', '$email', '$password')";
 			
         	if(mysqli_query($conn, $sql))
         	{
@@ -231,33 +244,45 @@
 
 						<fieldset>							
 							<p class="text-uppercase pull-center" id="signuptext"> <STRONG>SIGN UP</STRONG> </p>	
+                            <p class="text-lowercase" id="regrequiredtext" style="font-style: italic;">  
+                                (<span style="color: red">*</span> marked fields are must)
+                            </p>
 
 
-                            <div class="form-group">
-                                <label for="name" class="control-label">Name</label>
-                                <input type="text" name="registername" id="registername" class="form-control" placeholder="Enter name" value="">
-                                <span class="text-danger"><?php if(isset($errorName)) echo $errorName; ?></span>
-                            </div>
+                            
 
 							<div class="form-group">
-								<label for="username" class="control-label">Username</label>
-                    			<input type="text" name="registerusername" id="registerusername" class="form-control" placeholder="Enter username of length between 6 and 10" value="">
+								<label for="username" class="control-label">Username <span style="color: red">*</span></label>
+                    			<input type="text" name="registerusername" id="registerusername" class="form-control" 
+                                       placeholder="Enter username of length between 6 and 20" value="">
                     			<span class="text-danger"><?php if(isset($errorUsername)) echo $errorUsername; ?></span>
 							</div>
 
  							<div class="form-group">
-								<label for="email" class="control-label">Email</label>
-                    			<input type="email" name="registeremail" id="registeremail" class="form-control" autocomplete="off" placeholder="Enter email address" value="">
+								<label for="email" class="control-label">Email <span style="color: red">*</span></label>
+                    			<input type="email" name="registeremail" id="registeremail" class="form-control" autocomplete="off" 
+                                    placeholder="Enter email address" value="">
                     			<span class="text-danger"><?php if(isset($errorEmail)) echo $errorEmail; ?></span>
 							</div>
 
 							<div class="form-group">
-								<label for="password" class="control-label">Password</label>
-                  				<input type="password" id="registerpassword" name="registerpassword" class="form-control" autocomplete="off" placeholder="Enter password of length between 6 and 10" value="">
+								<label for="password" class="control-label">Password <span style="color: red">*</span></label>
+                  				<input type="password" id="registerpassword" name="registerpassword" class="form-control" autocomplete="off" 
+                                       placeholder="Enter password of length between 6 and 10" value="">
                   				<span class="text-danger"><?php if(isset($errorPassword)) echo $errorPassword; ?></span>
 							</div>
+
+                            <div class="radio">
+                                <label for="gender" class="control-label">Gender <span style="color: red">*</span></label> <br>
+                                <input type="radio" id="male"   name="gender" class="radio" value="Male" checked>   <label for="male">Male</label> &nbsp &nbsp
+                                <input type="radio" id="female" name="gender" class="radio" value="Female"> <label for="female">Female</label> &nbsp &nbsp
+                                <input type="radio" id="other"  name="gender" class="radio" value="Other">  <label for="other">Other</label>
+                                <span class="text-danger"><?php if(isset($errorGender)) echo $errorGender; ?></span>
+                                <br>
+                            </div>
 							
  							<div>
+                                <br>
  								<input type="submit" name="btn-register" class="btn btn-lg btn-primary" id="btn-register" value="Register">
  							</div>
 
@@ -285,14 +310,17 @@
 
 						<fieldset>							
 							<p class="text-uppercase" id="logintext"> <STRONG>Log In</STRONG></p>	
+                            <p class="text-lowercase" id="loginrequiredtext" style="font-style: italic;">  
+                                (<span style="color: red">*</span> marked fields are must)
+                            </p>
  								
 							<div class="form-group">
-								<label for="email" class="control-label">Email</label>
+								<label for="email" class="control-label">Email <span style="color: red">*</span> </label>
                     			<input type="email" name="email" class="form-control" autocomplete="off" placeholder="Enter email address" value="">
                     			<span class="text-danger"><?php if(isset($errorloginEmail)) echo $errorloginEmail; ?></span>
 							</div>
 							<div class="form-group">
-								<label for="password" class="control-label">Password</label>
+								<label for="password" class="control-label">Password <span style="color: red">*</span></label>
                     			<input type="password" name="password" class="form-control" autocomplete="off" placeholder="Enter password" value="">
                     			<span class="text-danger"><?php if(isset($errorloginPassword)) echo $errorloginPassword; ?></span>
 							</div>
