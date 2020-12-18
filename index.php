@@ -32,10 +32,10 @@
         	$errorloginPassword = 'Please enter password';
             $errorloginMsg = 'Invalid Email or Password';
     	}
-    	elseif(strlen($password)< 6)
+    	elseif((strlen($password)< 6) || (strlen($password)>10))
     	{
         	$errorlogin = true;
-        	$errorloginPassword = 'Password at least 6 character';
+        	$errorloginPassword = 'Password not of valid length';
             $errorloginMsg = 'Invalid Email or Password';
     	}
 
@@ -317,13 +317,21 @@
 							<div class="form-group">
 								<label for="email" class="control-label">Email <span style="color: red">*</span> </label>
                     			<input type="email" name="email" class="form-control" autocomplete="off" placeholder="Enter email address" value="">
+                                <!--
                     			<span class="text-danger"><?php if(isset($errorloginEmail)) echo $errorloginEmail; ?></span>
+                                -->
 							</div>
 							<div class="form-group">
 								<label for="password" class="control-label">Password <span style="color: red">*</span></label>
                     			<input type="password" name="password" class="form-control" autocomplete="off" placeholder="Enter password" value="">
+                                <!--
                     			<span class="text-danger"><?php if(isset($errorloginPassword)) echo $errorloginPassword; ?></span>
+                                -->
 							</div>
+                            <!-- 
+                                Individual messages are not shown for each field when loggin in,
+                                so that an attacker cannot get information why successful log in did not occur
+                            -->
 							<div>
 								<input type="submit" name="btn-login" id="btn-login" value="Login" class="btn btn-primary">
 							</div>

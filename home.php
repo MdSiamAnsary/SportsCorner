@@ -83,7 +83,9 @@ include_once('dbcon.php');
       <div class="row justify-content-center">
         <div class="section-title">
           <br>
+          
           <h2 id="siteid">Sports Corner</h2>
+          <h5 id="cruyffquoteid"><q>Soccer is simple, but it is difficult to play simple.</q> - Johan Cruyff</h5>
           <p id="sitedescription" style="color: #000; font-size: 1.2em; font-family: lora ">
             The most popular sport in world is football (which Americans call Soccer!). 
             Estimated number of fans of this sport is about 3.5 Billion.
