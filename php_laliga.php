@@ -52,8 +52,8 @@ $output = shell_exec($command);
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
-      <h1 style="font-family: LORA" class="logo mr-auto"><a href="home.php">
-
+      <h1 style="font-family: LORA" class="logo mr-auto">
+        <!-- <a href="home.php"> -->
         <?php
 
           $con=mysqli_connect("127.0.0.1","root","","sportscornerdb");
@@ -66,8 +66,8 @@ $output = shell_exec($command);
           }
 
         ?>
-
-        </a></h1>
+        <!-- </a> -->
+      </h1>
         
       <nav class="nav-menu d-none d-lg-block">
         <ul>
