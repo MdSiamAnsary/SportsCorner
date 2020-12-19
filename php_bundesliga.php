@@ -114,6 +114,12 @@ $output = shell_exec($command);
 
         </div>
 
+        <div class="section-title">
+          <p id="seasontext" style="font-family: Cambria; font-size: 1.5em; font-style: bold; color: #000;">
+            2020-21 Season Table Standings
+          </p>
+        </div>
+
         <?php
 
           echo "<div class='container>'";
