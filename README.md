@@ -21,6 +21,4 @@ To log in, one has to provided a valid registered **Email** and **Password** tha
 - **Frontend** For designing, HTML, CSS, JavaScript and PHP are used
 - **Backend** For different processing, PHP and Python are used. To retrieve the current league standings, a Python package has been used. The 	 
    python package is ([soccer-data-api 0.5](https://pypi.org/project/soccer-data-api/)). 
-   | soccer-data-api 0.5 | pip install soccer-data-api  |
-	| ------ | ------ |
 - **Database** MySQL (XAMPP) has been used 
