@@ -243,7 +243,9 @@
                 	?>
 
 						<fieldset>							
-							<p class="text-uppercase pull-center" id="signuptext"> <STRONG>Register User</STRONG> </p>	
+							<p class="text-uppercase pull-center" ><STRONG>
+                                <span id="signuptext">Register User</span>
+                            </STRONG> </p>	
                             <p class="text-lowercase" id="regrequiredtext" style="font-style: italic;">  
                                 (<span style="color: red">*</span> marked fields are must)
                             </p>
@@ -316,14 +318,16 @@
  								
 							<div class="form-group">
 								<label for="email" class="control-label">Email <span style="color: red">*</span> </label>
-                    			<input type="email" name="email" class="form-control" autocomplete="off" placeholder="Enter email address" value="">
+                    			<input type="email" name="email" id="loginemail" class="form-control" autocomplete="off" 
+                                       placeholder="Enter email address" value="">
                                 <!--
                     			<span class="text-danger"><?php if(isset($errorloginEmail)) echo $errorloginEmail; ?></span>
                                 -->
 							</div>
 							<div class="form-group">
 								<label for="password" class="control-label">Password <span style="color: red">*</span></label>
-                    			<input type="password" name="password" class="form-control" autocomplete="off" placeholder="Enter password" value="">
+                    			<input type="password" name="password" id="loginpassword" class="form-control" autocomplete="off" 
+                                       placeholder="Enter password" value="">
                                 <!--
                     			<span class="text-danger"><?php if(isset($errorloginPassword)) echo $errorloginPassword; ?></span>
                                 -->

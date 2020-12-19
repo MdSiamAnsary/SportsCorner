@@ -9,8 +9,8 @@ $user = $_SESSION['username'];
 
 include_once('dbcon.php');
 
-$command = escapeshellcmd('python soccerligueone.py');
-$output = shell_exec($command);
+// $command = escapeshellcmd('python soccerligueone.py');
+// $output = shell_exec($command);
 
 
 
