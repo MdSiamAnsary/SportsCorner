@@ -243,7 +243,7 @@
                 	?>
 
 						<fieldset>							
-							<p class="text-uppercase pull-center" id="signuptext"> <STRONG>SIGN UP</STRONG> </p>	
+							<p class="text-uppercase pull-center" id="signuptext"> <STRONG>Register User</STRONG> </p>	
                             <p class="text-lowercase" id="regrequiredtext" style="font-style: italic;">  
                                 (<span style="color: red">*</span> marked fields are must)
                             </p>
@@ -343,7 +343,16 @@
 		</div>
 		<p class="text-center" id="paraabout">
 			<br>
-			This is created to do testing with Selenium by <strong>Md Siam Ansary ID 201103</strong>
+            <p style="text-align: center; font-style: italic">
+                By, Md. Siam Ansary
+                <span style="font-style: italic;">
+                    <a href="mailto:siamansary.cse@gmail.com">
+                        (siamansary.cse@gmail.com)
+                    </a>
+                </span>
+                
+            </p>
+
 		</p>
 	</div>
 
