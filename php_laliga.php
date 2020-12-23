@@ -11,8 +11,8 @@ include_once('dbcon.php');
 
 
 
-// $command = escapeshellcmd('python soccerlaliga.py');
-// $output = shell_exec($command);
+$command = escapeshellcmd('python soccerlaliga.py');
+$output = shell_exec($command);
 
 
 
