@@ -20,5 +20,7 @@ To log in, one has to provided a valid registered **Email** and **Password** tha
 ##  Application process
 - **Frontend** For designing, HTML, CSS, JavaScript and PHP are used
 - **Backend** For different processing, PHP and Python are used. To retrieve the current league standings, a Python package has been used. The 	 
-   python package is ([soccer-data-api 0.5](https://pypi.org/project/soccer-data-api/)). 
+   python package is ([soccer-data-api 0.5](https://pypi.org/project/soccer-data-api/)). Python scripts have been run from PHP source codes. 
+   For this, XAMPP needs to be configured. In the `httpd.conf` file, `AddHandler cgi-script .cgi .pl .asp .py` needs to be there instead of 
+   `AddHandler cgi-script .cgi .pl .asp .py`
 - **Database** MySQL (XAMPP) has been used 
