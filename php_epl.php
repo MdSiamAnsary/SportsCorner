@@ -47,7 +47,6 @@ $output = shell_exec($command);
 
 <body>
 
-  <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
       <h1 style="font-family: LORA" class="logo mr-auto">
@@ -79,8 +78,7 @@ $output = shell_exec($command);
       </nav>
       <a id="logout" href="logout.php" class="get-started-btn scrollto">LOG OUT</a>
     </div>
-  </header><!-- End Header -->
-
+  </header>
 
   <main id="individualleague2">
 
