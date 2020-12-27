@@ -168,8 +168,6 @@
 		   $regMsg = 'Registration unsuccessful';
         }
         //---------------------------------------------------------------------------------------------
-   
-
        
     	if(!$error){
 			$sql = "insert into userstable(gender, username, email ,password) values('$gender', '$username', '$email', '$password')";
