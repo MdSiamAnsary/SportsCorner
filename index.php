@@ -17,7 +17,7 @@
     	if(empty($email))
     	{
         	$errorlogin = true;
-        	$errorloginEmail = 'Please input email';
+        	$errorloginEmail = 'Please enter a valid email';
             $errorloginMsg = 'Invalid Email or Password';
     	}
     	elseif(!filter_var($email, FILTER_VALIDATE_EMAIL))
@@ -113,7 +113,7 @@
         //---------------------Valid email must be provided -------------------------------------------
     	if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
         	$error = true;
-			$errorEmail = 'Please a valid input email';
+			$errorEmail = 'Please enter a valid email';
 			$regMsg = 'Registration unsuccessful';
     	}
         /*
