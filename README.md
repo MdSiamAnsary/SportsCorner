@@ -4,11 +4,11 @@
 
 ### Project Aspects
 - In this web project, the current league standings of the top five European  football leagues are displayed. The leagues are 
--- La Liga
--- English Premier League 
--- Bundesliga
--- Ligue 1
--- Serie A 
+  - La Liga
+  - English Premier League
+  - Bundesliga
+  - Ligue 1
+  - Serie A
 - One has to be a registered user to be able to use the system.
 
 ## Implementation description
