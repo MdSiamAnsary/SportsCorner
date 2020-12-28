@@ -32,7 +32,7 @@ To log in, one has to provided a valid registered **Email** and **Password** tha
 
 ### Display of League tables with information 
 
-- **Home page** After log in, user goes to home page. In the home page, the top four teams of the current league table of five leagues are displayed. 
+- **Home page** After log in, user goes to home page. In the home page, the top four teams of the current league tables of five leagues are displayed. 
 - **Individual League pages** For each of the five leagues, there are individual webpages. In each of them, current full league table is shown with the information about qualifying for UEFA Champions League and rules of promotion and relegation.
 
 ### Navigation and Logging out
@@ -41,7 +41,7 @@ From any of the individual league pages or from home page, user can go to any of
 
 ###  Storing registered users' information
 
-**XAMPP** has been used to store the users' information.  MySQL (XAMPP) has been used for database operation. A database has been created named `sportscornerdb` on `phpMyAdmin`. The database has one table and it is `userstable`. From the SQL files in the repository, the structures of the table can be understood. 
+**XAMPP** has been used to store the users' information.  MySQL (XAMPP) has been used for database operation. A database has been created named `sportscornerdb` on `phpMyAdmin`. The database has one table and it is `userstable`. From the SQL files in the repository, the structure of the table can be understood. 
 
 ### Getting the current league standings 
 To retrieve the current league standings, a Python package has been used. The 	 
