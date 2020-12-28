@@ -32,8 +32,8 @@ To log in, one has to provided a valid registered **Email** and **Password** tha
 
 ### Display of League tables with information 
 
-- **Home page** After log in, user goes to home page. In the home page, the top four teams of the current league tables of five leagues are displayed. 
-- **Individual League pages** For each of the five leagues, there are individual webpages. In each of them, current full league table is shown with the information about qualifying for UEFA Champions League and rules of promotion and relegation.
+- **Home page** After log in, user goes to home page. In the home page, the top four teams of the league tables of five leagues are displayed from last updated information. 
+- **Individual League pages** For each of the five leagues, there are individual webpages. In each of them, current updated full league table is shown with the information about qualifying for UEFA Champions League and rules of promotion and relegation.
 
 ### Navigation and Logging out
 From any of the individual league pages or from home page, user can go to any of the pages or log out. 
