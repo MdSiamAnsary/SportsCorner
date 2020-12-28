@@ -1,4 +1,4 @@
-Atletico Madrid,1,32,13,10,1,26,+21
+Atlético Madrid,1,32,13,10,1,26,+21
 Real Madrid,2,32,15,10,3,27,+13
 Real Sociedad,3,26,16,7,4,25,+13
 Villarreal,4,26,15,6,1,20,+6
