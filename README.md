@@ -44,8 +44,8 @@ From any of the individual league pages or from home page, user can go to any of
 **XAMPP** has been used to store the users' information.  MySQL (XAMPP) has been used for database operation. A database has been created named `sportscornerdb` on `phpMyAdmin`. The database has one table and it is `userstable`. From the SQL files in the repository, the structure of the table can be understood. 
 
 ### Getting the current league standings 
-To retrieve the current league standings, a Python package has been used. The 	 
-   python package is ([soccer-data-api 0.5](https://pypi.org/project/soccer-data-api/)).
+To retrieve the current league standings, a Python package has been used. <br>
+The python package is ([soccer-data-api 0.5](https://pypi.org/project/soccer-data-api/)).
 
 ### Using PHP and Python together 
 
