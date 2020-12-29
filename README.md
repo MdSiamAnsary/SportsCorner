@@ -9,11 +9,11 @@
   - Bundesliga
   - Ligue 1
   - Serie A
-- One has to be a registered user to be able to use the system.
+- One has to be a registered user and be logged in to be able to use the system.
 
 ## Implementation description
 ### Registration and Log in 
-To be able to use the system, one has to be a registered user. 
+To be able to use the system, one has to register with the system and be logged in.  
 
 To register, one has to provided four pieces of information on mandatory basis. They are 
 - **Username** Username can be of length between 6 and 20
