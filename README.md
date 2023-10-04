@@ -3,8 +3,8 @@
 ## [GitHub Repository](https://github.com/MdSiamAnsary/SportsCorner)
 Link of GitHub repository of the implementation : https://github.com/MdSiamAnsary/SportsCorner 
 
-## [Demo Video(s) of Implementation](https://drive.google.com/drive/folders/1WSppbQCXUA3XBVQqKCOxfSuPbRkK2ili?usp=sharing)
-Link of a simple demo video of the implementation : https://tinyurl.com/sportscornerdemovideo 
+## Demo Video(s) of Implementation
+A simple demo video is available at [[LINK](https://github.com/MdSiamAnsary/SportsCorner/tree/main/Demo%20video)] 
 
 ### Project Aspects
 - In this web project, the current league standings of the top five European  football leagues are displayed. The leagues are 
